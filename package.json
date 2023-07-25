@@ -1,0 +1,27 @@
+{
+  "name": "command-line-guide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bolah2009/command-line-guide.git",
+  "author": "Bola Ahmed Buari <36057474+bolah2009@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.0",
+    "@commitlint/config-conventional": "^17.4.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": "please-use-yarn"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "format": "npx prettier  --write \"**/*.{html,json,md,yaml,yml}\"",
+    "format:check": "npx prettier  --check \"**/*.{html,json,md,yaml,yml}\""
+  },
+  "lint-staged": {
+    "*.{html,js,json,md,yml,css}": "prettier  --write"
+  }
+}
